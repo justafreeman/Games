@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal de Jogos Online</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="navbar-brand">Portal de Jogos</div>
+      <div class="navbar-toggle">
+        <input type="checkbox" id="toggle-dark-mode" class="toggle-checkbox">
+        <label for="toggle-dark-mode" class="toggle-label"></label>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section-intro">
+      <div class="container">
+        <h1>Bem-vindo ao Portal de Jogos</h1>
+        <p>Encontre os melhores jogos online para se divertir!</p>
+        <img src="game-image.jpg" alt="Imagem do Jogo" class="game-image">
+      </div>
+    </section>
+
+    <section class="section-games">
+      <div class="container">
+        <h2>Jogos Disponíveis</h2>
+        <div class="game-list">
+          <!-- Adicione aqui a lista de jogos -->
+          <div class="game-item">
+            <h3>Final Fantasy 5</h3>
+            <img src="/capas/unnamed.jpg" alt="">
+            <p>É um RPG onde você precisa salvar o mundo.</p>
+            <button class="play-button" data-src="/jogos/ffv.html">Jogar</button>
+            <button class="details-button">Detalhes</button>
+          </div>
+          <div class="game-item">
+            <h3>Pokemon Ruby PT-BR</h3>
+            <p>Temos que pegar pokemons</p>
+            <button class="play-button" data-src="/jogos/pokemonruby.html">Jogar</button>
+            <button class="details-button">Detalhes</button>
+          </div>
+          <div class="game-item">
+            <h3>Bomberman 5</h3>
+            <p>Kabum</p>
+            <button class="play-button" data-src="/jogos/bomberman.html">Jogar</button>
+            <button class="details-button">Detalhes</button>
+          </div>
+        </div>
+        </div>
+      </div>
+      
+  </div>
+    </section>
+
+    <section class="section-details">
+      <div class="container">
+        <div class="details-content">
+          <h2>Título do Jogo</h2>
+          <p>Descrição do Jogo.</p>
+          <button class="close-button">Fechar</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

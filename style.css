@@ -1,0 +1,347 @@
+/* Reset de Estilos */
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Estilo da Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #222;
+  color: #fff;
+}
+
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.toggle-checkbox {
+  display: none;
+}
+
+.toggle-label {
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #ccc;
+  position: relative;
+  cursor: pointer;
+}
+
+.toggle-label::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #fff;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.toggle-checkbox:checked + .toggle-label {
+  background-color: #0064ff;
+}
+
+.toggle-checkbox:checked + .toggle-label::before {
+  transform: translateX(20px);
+}
+
+/* Estilo da Seção de Introdução */
+.section-intro {
+  background-color: #f5f5f5;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-intro h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.section-intro p {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.game-image {
+  width: 300px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Estilo da Seção de Jogos */
+.section-games {
+  background-color: #fff;
+  padding: 40px 0;
+}
+
+.game-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.game-list img {
+  max-width: 300px;
+}
+
+.game-item {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.game-item h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.game-item p {
+  margin-bottom: 20px;
+}
+
+.play-button,
+.details-button {
+  background-color: #ffa500;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.play-button {
+  margin-right: 10px;
+}
+
+.details-button {
+  background-color: #ff4500;
+}
+
+/* Estilo da Seção de Detalhes */
+/* .section-details {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.details-content {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 5px;
+  max-width: 600px;
+  text-align: center;
+}
+
+.details-content h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.details-content p {
+  margin-bottom: 40px;
+}
+
+.close-button {
+  background-color: #ff4500;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+} */
+
+/* Estilo da Seção de Detalhes */
+.section-details {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.details-content {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 5px;
+  max-width: 600px;
+  text-align: center;
+  position: relative;
+}
+
+.close-button {
+  background-color: #ff4500;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* Estilo da Seção de Detalhes */
+.section-details.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.section-details .details-content {
+  position: relative;
+  z-index: 1;
+}
+
+.section-details .details-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8px); /* Adiciona o efeito de blur de fundo */
+  z-index: 0;
+}
+
+.section-details .close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ff4500;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Estilização do iframe */
+.iframe-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+.iframe-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: -1;
+}
+
+.iframe-wrapper {
+  position: relative;
+  width: 800px;
+  height: 600px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilização da seção de detalhes */
+.section-details {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+/* Estilização do botão "Fechar" */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ff4500;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Modo Escuro */
+body.dark-mode {
+  background-color: #222;
+  color: #fff;
+}
+
+body.dark-mode .navbar {
+  background-color: #000;
+}
+
+body.dark-mode .toggle-label {
+  background-color: #888;
+}
+
+body.dark-mode .toggle-label::before {
+  background-color: #000;
+}
+
+body.dark-mode .section-intro {
+  background-color: #333;
+}
+
+body.dark-mode .section-games {
+  background-color: #444;
+}
+
+body.dark-mode .game-item {
+  border-color: #666;
+}
+
+body.dark-mode .section-details {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+body.dark-mode .details-content {
+  background-color: #666;
+  color: #fff;
+}
+
+body.dark-mode .close-button {
+  background-color: #ff4500;
+  color: #fff;
+} 

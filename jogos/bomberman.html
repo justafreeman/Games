@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Final Fantasy 5</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/justafreeman/snesx@master/data/emu-css.min.css">
+  <style>
+    body {
+      background: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #game-container {
+      width: 600px;
+      height: 400px;
+      max-width: 100%;
+    }
+
+    #play-button {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #0064ff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: opacity 0.3s;
+    }
+
+
+  </style>
+</head>
+
+<body>
+  <div id="game-container">
+    <div id="game"></div>
+  </div>
+  <button id="play-button">Jogar</button>
+
+  <script>
+    function loadGame() {
+      var gameContainer = document.getElementById('game-container');
+      var playButton = document.getElementById('play-button');
+
+      EJS_player = '#game';
+      EJS_core = 'snes';
+      EJS_color = '#0064ff';
+      EJS_pathtodata = 'https://cdn.jsdelivr.net/gh/justafreeman/snesx@master/data/';
+      EJS_gameUrl = 'https://cdn.jsdelivr.net/gh/justafreeman/roms@master/Super%20Bomberman%205%20(Japan).sfc';
+
+      var scriptLoader = document.createElement('script');
+      scriptLoader.src = 'https://cdn.jsdelivr.net/gh/justafreeman/snes@master/data/loader.js';
+      scriptLoader.onload = function() {
+        var emulatorScript = document.createElement('script');
+        emulatorScript.src = 'https://cdn.jsdelivr.net/gh/justafreeman/snesx@master/data/emulator.js';
+        document.body.appendChild(emulatorScript);
+      };
+
+      document.body.appendChild(scriptLoader);
+
+      gameContainer.classList.add('hide');
+      playButton.style.display = 'none';
+    }
+
+    var playButton = document.getElementById('play-button');
+    playButton.addEventListener('click', loadGame);
+
+    
+  </script>
+  
+</body>
+
+</html>
